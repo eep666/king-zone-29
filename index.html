@@ -1,8 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Hour Countdown Timer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
         .background-image {
@@ -68,54 +70,6 @@
                 </li>
                 <li class="flex items-center">
                     <i class="fas fa-check-circle text-green-500 mr-2 text-2xl"></i>
-                    <span class="text-black text-xl">withdrawal in 2 minutes</span>
+                    <span class="text-black text-xl">Withdrawal in 2 minutes</span>
                 </li>
-                <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-2 text-2xl"></i>
-                    <span class="text-black text-xl">Always win under 3L</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <script>
-        // Set the initial target date to 1 minute from now
-        var countDownDate = new Date(new Date().getTime() + 1 * 60 * 1000).getTime(); // 1 minute from now
-
-        function resetCountdown() {
-            // Reset to a new target date (e.g., 24 hours from now)
-            countDownDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).getTime();
-        }
-
-        function updateCountdown() {
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.max(0, Math.floor(distance / (1000 * 60 * 60 * 24)));
-            var hours = Math.max(0, Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-            var minutes = Math.max(0, Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-            var seconds = Math.max(0, Math.floor((distance % (1000 * 60)) / 1000));
-
-            // Display the result in the elements with id="days", id="hours", id="minutes", id="seconds"
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-
-            // If the count down is over, reset the countdown
-            if (distance < 0) {
-                resetCountdown();
-            }
-        }
-
-        // Initialize the countdown immediately
-        updateCountdown();
-
-        // Update the count down every 1 second
-        var x = setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
+                <li class="flex
