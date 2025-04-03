@@ -44,7 +44,7 @@
                     <p class="text-yellow-500 text-lg"><span class="font-bold text-white">MINUTES</span></p>
                 </div>
                 <div class="text-center">
-                    <p class="text-4xl font-bold text-green-500" id="seconds">01</p>
+                    <p class="text-4xl font-bold text-green-500" id="seconds">00</p>
                     <p class="text-green-500 text-lg"><span class="font-bold text-white">SECONDS</span></p>
                 </div>
             </div>
@@ -78,8 +78,8 @@
         </div>
     </div>
     <script>
-        // Set the initial target date
-        var countDownDate = new Date("2023-12-31T23:59:59").getTime(); // Replace with your desired target date and time
+        // Set the initial target date to 1 minute from now
+        var countDownDate = new Date(new Date().getTime() + 1 * 60 * 1000).getTime(); // 1 minute from now
 
         function resetCountdown() {
             // Reset to a new target date (e.g., 24 hours from now)
@@ -119,4 +119,3 @@
     </script>
 </body>
 </html>
-
