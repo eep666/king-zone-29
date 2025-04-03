@@ -78,8 +78,13 @@
         </div>
     </div>
     <script>
-        // Set the date we're counting down to (e.g., 24 hours from a fixed start time)
+        // Set the initial target date
         var countDownDate = new Date("2023-12-31T23:59:59").getTime(); // Replace with your desired target date and time
+
+        function resetCountdown() {
+            // Reset to a new target date (e.g., 24 hours from now)
+            countDownDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).getTime();
+        }
 
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -101,12 +106,9 @@
             document.getElementById("minutes").innerHTML = minutes;
             document.getElementById("seconds").innerHTML = seconds;
 
-            // If the count down is over, write some text 
+            // If the count down is over, reset the countdown
             if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = `
-                    <p class="text-4xl font-bold text-red-600">EXPIRED</p>
-                `;
+                resetCountdown();
             }
         }, 1000);
     </script>
