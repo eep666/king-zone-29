@@ -86,8 +86,7 @@
             countDownDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).getTime();
         }
 
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+        function updateCountdown() {
             // Get today's date and time
             var now = new Date().getTime();
 
@@ -110,7 +109,13 @@
             if (distance < 0) {
                 resetCountdown();
             }
-        }, 1000);
+        }
+
+        // Initialize the countdown immediately
+        updateCountdown();
+
+        // Update the count down every 1 second
+        var x = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
